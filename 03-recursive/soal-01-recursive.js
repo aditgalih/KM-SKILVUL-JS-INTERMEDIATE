@@ -17,3 +17,5 @@ function sumOfArray(arrSum) {
 
 console.log(sumOfArray(arr1));
 console.log(sumOfArray(arr2));
+
+module.exports = sumOfArray
