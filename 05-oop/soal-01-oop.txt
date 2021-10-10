@@ -1,0 +1,30 @@
+// TULIS ANALISA ANDA DIBAWAH
+ADITYA GALIH PRAWIRA (SERRUM - 24)
+
+// 1. Apa yang akan terjadi apabila kita jalankan baris kode dibawah?
+	fun1 { fun1: [Function], fun2: [Function] }
+	fun2 Window {}
+
+// 2. Apakah hasil dari fun1 dan fun2 itu sama?
+	Hasilnya tidak sama
+
+// 3. Buatlah sebuah alasan dari poin ke-2, mengapa baris kode tersebut menampilkan hasil baik itu sama ataupun tidak.
+	(a) fun1 menggunakan function() yang terdapat this, dan akan mencari ke lexical scopenya,
+	atau pada kode dibawah adalah obj, yang mana nantinya fun 1 akan menampilkan semua value atau isi yang ada pada obj.  
+	(b) fun2 menggunakan arrow function atau () => yang mana terdapat this yang tidak akan mencari ke lexical scopenya, 
+	karena arrow tidak memiliki konsep this. Pada obj tidak terdapat this, maka this akan mencari ke luar function sampai ke window.
+        Jika pada window tidak ada maka akan mengembalikan undefined
+	(c) Kesimpulan: pada fun1 akan mencari ke lexical scopenya kemudian berakhir pada object yaitu obj, dan kemudian menampilkan isi dari object tersebut, 
+	sedangkan pada fun2 karena tidak memiliki konsep this maka ia akan mencari sampai ke window.
+
+const obj = {
+  fun1: function() {
+    console.log("fun1", this);
+  },
+  fun2: () => {
+    console.log("fun2", this);
+  }
+};
+
+obj.fun1();
+obj.fun2();
