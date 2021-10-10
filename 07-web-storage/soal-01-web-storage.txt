@@ -1,0 +1,14 @@
+1. Local Storage adalah tempat penyimpanan data di browser yang tidak memiliki masa berakhir atau tanggal kedaluwarsa. 
+   
+2. Cookies adalah data kecil yang dikirim dari situs web dan disimpan di komputer ketika kita menjelaja web di browser. 
+
+3. Perbedaan antara localStorage dan sessionStorage:
+   >> localStorage 
+      - tidak memiliki masa kedaluwarsa
+      - data tidak hilang meski web browser ditutup
+      - data yang disimpan dapat dihapus memakai javascript atau pembersihan cache
+   >> sessionStorage
+      - memiliki masa kedaluwarsa, hanya berlaku untuk satu sesi dari sebuah halaman web
+      - data akan terus tersimpan selama browser terbuka dan tidak hilang jika halaman web di-reload
+      - membuka banyak tab/window dengan URL yang sama, akan menciptakan session storage yang berbeda di masing-masing tab/window
+      - data yang tersimpan akan hilang ketika sesi dari laman web berakhir.
